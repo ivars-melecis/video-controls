@@ -1,6 +1,17 @@
 # Simple video controls
 
-Sometimes design requires video to be without default controls (see below). For instance - if video is full screen background. Saying that - having simplictic controlled controls for such situations is also benefitial for UI. This helper function provides play/pause and mute toggle for any video tag. Function in written in ES5 and can be used without compilation. Supports IE11.
+<!-- TOC -->
+
+- [Simple video controls](#simple-video-controls)
+  - [Markup](#markup)
+  - [Configuration](#configuration)
+    - [Legend](#legend)
+    - [Return](#return)
+  - [Initial state](#initial-state)
+  - [Usage](#usage)
+  - [Quick use](#quick-use)
+
+<!-- /TOC -->
 
 
 ![Default controls](default-controls.png)
