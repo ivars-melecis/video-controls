@@ -1,0 +1,149 @@
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+}
+.video-block {
+  position: relative;
+  width: 500px;
+}
+#video {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.video-block .video-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: ease 0.2s opacity;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.video-block:hover .video-controls {
+  opacity: 1;
+}
+
+.reset-btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.video-block .video-control {
+  cursor: pointer;
+}
+
+.video-block .pause-btn,
+.video-block .play-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.video-block .pause-btn span,
+.video-block .play-btn span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-block .pause-btn span svg,
+.video-block .play-btn span svg {
+  display: block;
+  width: 50px;
+  height: 50px;
+  fill: #fff;
+}
+
+.video-block.video-on .pause-btn,
+.video-block .play-btn {
+  display: block;
+}
+
+.video-block.video-on .play-btn {
+  display: none;
+}
+
+.video-block .mute-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  z-index: 10;
+}
+.video-block .mute-btn svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.video-block .mute-btn span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: ease 0.2s opacity;
+}
+
+.video-block.video-muted .mute-btn .speaker-on,
+.video-block .mute-btn .speaker-off {
+  opacity: 0;
+  z-index: 1;
+}
+
+.video-block.video-muted .mute-btn .speaker-off {
+  opacity: 1;
+  z-index: 2;
+}
+
+#destroy {
+  background: #5f021f;
+  width: 500px;
+  height: 50px;
+  margin-top: 20px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #fbfbfb;
+  cursor: pointer;
+}
+
+#destroy:hover {
+  background: #333;
+}
